@@ -4,17 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon-success-check.svg">
   
-  <title>Frontend Mentor | Contact form</title>
+  <title>Contact Form | Aakash Verma</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
+  <main role="main">
+    <div class="container">
+      <h1 class="form_heading">
+        Contact Us
+      </h1>
+      <form class="form_container">
+        <div class="full_name">
+          <label for="first_name">
+            <span class="important_field">First Name</span>
+            <input type="text" name="first_name">
+          </label>
+          <label for="last_name">
+            <span class="important_field">
+              Last Name
+            </span>
+            <input type="text" name="last_name">
+          </label>
+        </div>
+        <label for="email_address">
+          <span class="important_field">
+            Email Address
+          </span>
+          <input type="text" name="email_address">
+        </label>
+        <label for="first_name">
+          <span class="important_field">
+            Query Type
+          </span>
+          <div>
+            <input type="radio" value="General Enquiry" name="first_name">
+            <input type="radio" value="Support Request" name="first_name">
+          </div>
+        </label>
+        <label for="message">
+          <span class="important_field">
+            Message
+          </span>
+          <textarea name="message"></textarea>
+        </label>
+        <label for="consent">
+          <input type="checkbox" name="consent">
+          <span class="important_field">I consent to being contacted by the team</span>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <div>
+        <img src="./assets/images/icon-success-check.svg" alt="">
+        <strong>Message Sent!</strong>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </main>
 <!-- 
-  Contact Us
 
-  First Name
   This field is required
 
   Last Name
@@ -25,24 +77,24 @@
   This field is required
 
   Query Type
-  General Enquiry
-  Support Request
+  
+  
   Please select a query type
 
   Message
   This field is required
 
-  I consent to being contacted by the team
+  
   To submit this form, please consent to being contacted
 
   Submit
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
   
-  <div class="attribution">
+   -->
+  
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://linkedin.com/in/skyv2022">Aakash Verma</a>.
+  </footer>
 </body>
 </html>

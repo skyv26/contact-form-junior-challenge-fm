@@ -21,43 +21,43 @@
       </h1>
       <form class="form_container">
         <div class="full_name">
-          <label for="first_name">
+          <label for="first_name" class="label">
             <span class="important_field">First Name</span>
-            <input type="text" name="first_name">
+            <input type="text" name="first_name" class="input error">
           </label>
-          <label for="last_name">
+          <label for="last_name" class="label">
             <span class="important_field">
               Last Name
             </span>
-            <input type="text" name="last_name">
+            <input type="text" name="last_name" class="input error">
           </label>
         </div>
-        <label for="email_address">
+        <label for="email_address" class="label">
           <span class="important_field">
             Email Address
           </span>
-          <input type="text" name="email_address">
+          <input type="text" name="email_address" class="input error">
         </label>
-        <label for="first_name">
+        <label for="query_type" class="label">
           <span class="important_field">
             Query Type
           </span>
-          <div>
-            <input type="radio" value="General Enquiry" name="first_name">
-            <input type="radio" value="Support Request" name="first_name">
+          <div class="query_type">
+            <input type="radio" value="General Enquiry" name="query_type" class="input error">
+            <input type="radio" value="Support Request" name="query_type" class="input error">
           </div>
         </label>
-        <label for="message">
+        <label for="message" class="label">
           <span class="important_field">
             Message
           </span>
-          <textarea name="message"></textarea>
+          <textarea name="message" class="input error"></textarea>
         </label>
-        <label for="consent">
-          <input type="checkbox" name="consent">
+        <label for="consent" class="label">
+          <input type="checkbox" name="consent" class="input error">
           <span class="important_field">I consent to being contacted by the team</span>
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit" class="submit_btn">Submit</button>
       </form>
     </div>
     <div>

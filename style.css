@@ -30,6 +30,10 @@ body {
     width: 85%;
     margin: 3rem auto;
     padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .form_heading {
@@ -39,18 +43,29 @@ body {
 .full_name {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .form_container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     .label {
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
         width: 100%;
+        
+        .important_field {
+            width: max-content;
+            position: relative;
+            &::after {
+                content: '*';
+                position: absolute;
+                top: 0;
+                right: -1rem;
+            }
+        }
 
         .input {
             height: 4rem;

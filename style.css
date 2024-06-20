@@ -55,17 +55,21 @@ body {
         .input {
             height: 4rem;
             padding-left: 1.25rem;
+            border: 1px solid var(--gray-900);
+            border-radius: 0.5rem;
         }
 
         .textarea {
             padding: 1.25rem;
             height: 14rem;
+            border-radius: 0.5rem;
         }
 
         .radio_input {
             height: 4rem;
             padding-left: 1.25rem;
             border: 1px solid var(--gray-900);
+            border-radius: 0.5rem;
             display: flex;
             gap: 1rem;
             align-items: center;
@@ -90,5 +94,7 @@ body {
 
     .submit_btn {
         padding: 1.05rem;
+        border: 1px solid var(--gray-900);
+        border-radius: 0.5rem;        
     }
 }

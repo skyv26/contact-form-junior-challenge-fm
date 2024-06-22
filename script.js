@@ -62,9 +62,5 @@ let isAllFieldsAreOk = true;
   messageBox.classList.toggle('show');
   setTimeout(() => {
     messageBox.classList.toggle('show');
-  }, 2500);
-  // if(isAllFieldsAreOk) {
-  // }
-  // return  isAllFieldsAreOk ?? raiseTheError(formObject)
-    
+  }, 2500); 
 });

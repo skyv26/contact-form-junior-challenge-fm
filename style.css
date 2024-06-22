@@ -28,7 +28,7 @@ body {
 
   @media (min-width: 768px) {
     display: grid;
-    place-content: center;  
+    place-content: center;
     padding: 0;
   }
 }
@@ -322,4 +322,8 @@ body {
     bottom: 0;
     padding: 2rem 0;
   }
+}
+
+.input[type="checkbox"] {
+  accent-color: var(--green-600);
 }

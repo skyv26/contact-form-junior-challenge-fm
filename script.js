@@ -60,7 +60,10 @@ let isAllFieldsAreOk = true;
   }
 
   messageBox.classList.toggle('show');
+  form.reset()
+  removeErrorMessage();
+
   setTimeout(() => {
     messageBox.classList.toggle('show');
-  }, 2500); 
+  }, 3000); 
 });

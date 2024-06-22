@@ -1,4 +1,5 @@
 const form = document.querySelector(".form_container");
+const messageBox = document.querySelector(".success-box");
 
 const errorMessageHTML = (errorMsg) => `<span class="error-message">${errorMsg}</span>`;
 
@@ -15,37 +16,55 @@ const inputTypeBasedMessageReturn = (TYPE) => {
 
 const raiseTheError = (formObject) => {
     Object.keys(formObject).forEach((each_input) => {
+      if(!formObject[each_input] || formObject[each_input] === '') {
         const input = form.querySelector(`input[name="${each_input}"]`) ?? form.querySelector(`textarea[name="${each_input}"]`);
-            // console.log("asdasd", each_input)
         input.classList.remove('error');
         input.classList.add('error');
         const inputType = input?.getAttribute('type') ?? 'textarea';
-        console.log(inputTypeBasedMessageReturn(inputType));
         const label = form.querySelector(`label[for="${each_input === 'textarea' ? 'message' : each_input}"]`);
         label.insertAdjacentHTML('beforeend', inputTypeBasedMessageReturn(inputType))
+        return true;
+      }
     });
+    return false;
 };
+
+const removeErrorMessage = () => {
+  const elements = document?.querySelectorAll('.error-message');
+  if(elements) {
+    document.querySelectorAll('.input').forEach(element => element.classList.remove('error'))
+    elements.forEach(element => element.remove());
+  } 
+}
 
 form.addEventListener("submit", (e) => {
 let isAllFieldsAreOk = true;
   // Prevent the window to reload after button click
   e.preventDefault();
-
+  removeErrorMessage();
   // Used the in-built FormData API class to get the form inputs
   const formData = new FormData(form);
   const formObject = Object.fromEntries(formData.entries());
   if(!formObject.consent) {
     formObject.consent = false;
   }
+
   if(!formObject.query_type) {
     formObject.query_type = '';
   }
+ 
+  isAllFieldsAreOk = Object.values(formObject).every((each) => each && each !== '');
+  if(!isAllFieldsAreOk) {
+    raiseTheError(formObject)
+    return;
+  }
 
-  raiseTheError(formObject)
-  isAllFieldsAreOk = Object.values(formObject).every((each) => each !== '');
-
-  console.table([formObject])
-
-//   console.log(isAllFieldsAreOk);
+  messageBox.classList.toggle('show');
+  setTimeout(() => {
+    messageBox.classList.toggle('show');
+  }, 2500);
+  // if(isAllFieldsAreOk) {
+  // }
+  // return  isAllFieldsAreOk ?? raiseTheError(formObject)
     
 });

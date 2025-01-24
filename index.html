@@ -9,7 +9,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icon-success-check.svg">
 
   <title>Contact Form | Aakash Verma</title>
-
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 
@@ -23,82 +27,63 @@
         <div class="full_name">
           <label for="first_name" class="label">
             <span class="important_field">First Name</span>
-            <input type="text" name="first_name" class="input error">
+            <input type="text" name="first_name" class="input">
           </label>
           <label for="last_name" class="label">
             <span class="important_field">
               Last Name
             </span>
-            <input type="text" name="last_name" class="input error">
+            <input type="text" name="last_name" class="input">
           </label>
         </div>
         <label for="email_address" class="label">
           <span class="important_field">
             Email Address
           </span>
-          <input type="text" name="email_address" class="input error">
+          <input type="email" name="email_address" class="input">
         </label>
         <label for="query_type" class="label">
           <span class="important_field">
             Query Type
           </span>
           <div class="query_type">
-            <input type="radio" value="General Enquiry" name="query_type" class="input error">
-            <input type="radio" value="Support Request" name="query_type" class="input error">
+            <label class="radio_input">
+              <input type="radio" value="General Enquiry" name="query_type" class="input">
+              General Enquiry
+            </label>
+            <label class="radio_input">
+              <input type="radio" value="Support Request" name="query_type" class="input">
+              Support Request
+            </label>
           </div>
         </label>
         <label for="message" class="label">
           <span class="important_field">
             Message
           </span>
-          <textarea name="message" class="input error"></textarea>
+          <textarea name="message" class="input textarea"></textarea>
         </label>
-        <label for="consent" class="label">
-          <input type="checkbox" name="consent" class="input error">
-          <span class="important_field">I consent to being contacted by the team</span>
+        <label for="consent" class="label consent">
+          <input type="checkbox" name="consent" class="input">
+          <span class="important_field consent">I consent to being contacted by the team</span>
         </label>
         <button type="submit" class="submit_btn">Submit</button>
       </form>
     </div>
-    <div>
-      <div>
+    <div class="success-box">
+      <div class="message-title">
         <img src="./assets/images/icon-success-check.svg" alt="">
         <strong>Message Sent!</strong>
       </div>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
+      <p class="success-message">Thanks for completing the form. We'll be in touch soon!</p>
     </div>
   </main>
-  <!-- 
-
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  
-  
-  Please select a query type
-
-  Message
-  This field is required
-
-  
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  
-   -->
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="https://linkedin.com/in/skyv2022">Aakash Verma</a>.
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>
